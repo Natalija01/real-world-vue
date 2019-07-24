@@ -15,5 +15,12 @@ export default {
   },
   getEvent(id) {
     return apiClient.get("/events/" + id);
+  },
+
+  /* Adding event to the datebase db.json file
+     It's connected with store.js action  
+  */
+  postEvent(event) {
+    return apiClient.post("/events", event);
   }
 };
